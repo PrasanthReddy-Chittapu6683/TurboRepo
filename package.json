@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "build": "turbo run build",
-    "dev": "turbo run dev",
+    "build": "turbo run build --no-daemon",
+    "dev": "turbo run dev --no-cache --continue --no-daemon",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
@@ -13,10 +13,7 @@
     "prettier": "^2.5.1",
     "turbo": "latest"
   },
-  "name": "TurboRepo",
+  "name": "turborepo",
   "packageManager": "npm@8.10.0",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "workspaces": ["apps/*", "packages/*"]
 }
